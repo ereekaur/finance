@@ -2,9 +2,9 @@
 
 ---------- Insurance calculations ----------
 
---------------------------------------------------------------------------------------------
-| In this portfolio I shall calculate some common cases which in my opinon are interesting   |
-| and may occur in insurance companies.                                                      |
+
+ In this portfolio I shall calculate some common cases which in my opinon are interesting   
+ and may occur in insurance companies.                                                      
 --------------------------------------------------------------------------------------------
 
 
