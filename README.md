@@ -1,6 +1,6 @@
 # insurance
 
----------- Insurance calculations ----------
+
 
  In this portfolio I calculate some common cases which in my opinon are interesting   
  and occur in insurance companies.                                                      
