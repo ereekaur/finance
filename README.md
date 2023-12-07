@@ -9,11 +9,15 @@ The data is being simulated and confidence intervals with corresponding quantile
 #2 In the second example I consider certain bonus classes and how steep difference there should be 
 between classes taking account the variance in order to maximize revenue.
 
+#3 Third example considers whether certain stock data deviates from Brownian motion or not
+
 
 TODO:  
 
-1) Add SL/XL -insurance analyses
-2) Try to simulate data in #1 using Panjer algorithm
+1) Add SL/XL -insurance analyses example
+2) Try to simulate data in #1 using Panjer algorithm'
+3) What if normal distribution in the example #1 with Cauchy distribution
+as it sort of describes better the worst case scenario
 
 
 
