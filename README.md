@@ -18,7 +18,7 @@ TODO:
 
 1) Add SL/XL -insurance analyses example
 2) Try to simulate data in #1 using Panjer algorithm
-3) What happens if the normal distribution in the example #1 is being 'replaced' with Cauchy distribution
+3) What happens if the Poisson distribution in the example #1 is being 'replaced' with Cauchy distribution
 as it in some sense describes better the worst case scenario 
 
 
