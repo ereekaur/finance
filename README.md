@@ -23,8 +23,7 @@ TODO:
 as it in some sense describes better the worst case scenario
 
 
-[![Java](https://img.shields.io/github/languages/top/yourusername/yourrepository?label=Java)](https://github.com/ereekaur/finance)
-[![Python](https://img.shields.io/github/languages/top/yourusername/yourrepository?label=Python)](https://github.com/ereekaur/finance)
+
 
 
 
