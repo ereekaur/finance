@@ -1,6 +1,6 @@
 
- In this portfolio I examine some common cases which in my opinion are interesting,   
- and occur in finance calculations.                                                      
+ In this portfolio I have collected and calculated some common cases which in my opinion are interesting,   
+ and which occur in finance world.                                                      
 
 
 #1 In the first example insurance data is being read from excel sheet and the claim costs are assumed 
