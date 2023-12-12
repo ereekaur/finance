@@ -1,13 +1,13 @@
 
- In this portfolio I have collected and calculated some common cases which in my opinion are interesting,   
- and which occur in finance world.                                                      
+ In this portfolio I have collected and calculated some common cases whichcould occur or are
+ otherwise interesting in finance world.                                                      
 
 
 #1 In the first example insurance data is being read from excel sheet and the claim costs are assumed 
 to be Poisson distributed. The data is being simulated and confidence intervals with corresponding 
 quantiles are printed.
 
-#2 In the second example I consider certain bonus classes in insurance companies and how steep difference 
+#2 In the second example I consider certain (imaginary) bonus classes in insurance companies and how steep difference 
 there should be between classes taking account the variance in order to maximize revenue.
 
 #3 The third example considers how much certain stock data deviates from Brownian motion or not.
