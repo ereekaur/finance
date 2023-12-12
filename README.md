@@ -7,8 +7,8 @@
 to be Poisson distributed. The data is being simulated and confidence intervals with corresponding 
 quantiles are printed.
 
-#2 In the second example I consider certain (imaginary) bonus classes in insurance companies and how steep difference 
-there should be between classes taking account the variance in order to maximize revenue.
+#2 In the second example I consider certain (imaginary) bonus classes in insurance companies and I will find out
+how steep difference there should be between classes taking account the variance in order to maximize revenue.
 
 #3 The third example considers how much certain stock data deviates from Brownian motion or not.
 Here, I shall take a look at crypto-currencies and for the question "how much" is 
