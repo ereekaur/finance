@@ -9,9 +9,11 @@ what are the claim costs. First thought might be that we take 100 random costs f
 data over and over again,say one million times which yields
 
 
-<img src="https://raw.githubusercontent.com/ereekaur/finance/main/onemillion.png" width="300" height="300">
+<img src="https://raw.githubusercontent.com/ereekaur/finance/main/onemillion.png" width="500" height="500">
 
-
+and the expected value is roughly 600k. However, this does not take account that the claim costs is a sample
+from some distribution itself. It is convenient therefore to assume that the sample is from binomial distribution
+with the success probability of non zero claims / all claims.
 
 
 
