@@ -1,10 +1,10 @@
-
- In this portfolio I have collected and calculated some common cases whichcould occur or are
+![image](https://github.com/ereekaur/finance/assets/113838261/eb5c95cc-1502-49b7-8dea-f5bedb4cb5a0)
+ In this portfolio I have collected and calculated some common cases which could occur or are
  otherwise interesting in finance world.                                                      
 
  
 #1 In the first example I have insurance data, namely dates and claims costs for each day. 
-Let us assume we can expect 100 claims to occur and we want to calculate, based on this data
+Let us assume we can expect 100 claims to happen and we want to calculate, based on this data
 what are the claim costs. First thought might be that we take 100 random costs from that 
 data over and over again,say one million times which yields
 
@@ -13,10 +13,10 @@ data over and over again,say one million times which yields
 
 and the expected value is roughly 600k. However, this does not take account that the claim costs is a sample
 from some distribution itself. It is convenient therefore to assume that the sample is from binomial distribution
-with the success probability of non zero claims / all claims.
+with the success probability of non zero claims / all claims. This in turn yields the distribution
 
 
-
+<img src="https://raw.githubusercontent.com/ereekaur/finance/main/totalcost.png" width="500" height="500">
 
 
 
