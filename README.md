@@ -1,4 +1,4 @@
-![image](https://github.com/ereekaur/finance/assets/113838261/eb5c95cc-1502-49b7-8dea-f5bedb4cb5a0)
+
  In this portfolio I have collected and calculated some common cases which could occur or are
  otherwise interesting in finance world.                                                      
 
@@ -14,6 +14,7 @@ data over and over again,say one million times which yields
 and the expected value is roughly 600k. However, this does not take account that the claim costs is a sample
 from some distribution itself. It is convenient therefore to assume that the sample is from binomial distribution
 with the success probability of non zero claims / all claims. This in turn yields the distribution
+
 
 
 <img src="https://raw.githubusercontent.com/ereekaur/finance/main/totalcost.png" width="500" height="500">
