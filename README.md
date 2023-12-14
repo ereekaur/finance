@@ -9,6 +9,10 @@ what are the claim costs. First thought might be that we take 100 random costs f
 data over and over again,say one million times which yields
 
 
+![onemillion Image](https://raw.githubusercontent.com/ereekaur/finance/main/onemillion.png)
+
+
+
 
 
 
