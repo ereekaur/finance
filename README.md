@@ -19,7 +19,10 @@ with the success probability of non zero claims / all claims. This in turn yield
 
 <img src="https://raw.githubusercontent.com/ereekaur/finance/main/totalcost.png" width="500" height="500">
 
-
+which gives expected value roughly 223k. In insurance company we would be interested what premium we could
+offer, say, with 99% confidence. In this case it would be 469k. If we want to put more weight on tails
+we could use Cauchy distribution with expected value of 36, this gives 600k as 95% confidence value
+which is a very extreme estimate.
 
 
 
