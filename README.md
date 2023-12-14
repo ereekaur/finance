@@ -2,10 +2,19 @@
  In this portfolio I have collected and calculated some common cases whichcould occur or are
  otherwise interesting in finance world.                                                      
 
+ 
+#1 In the first example I have insurance data, namely dates and claims costs for each day. 
+Let us assume we can expect 100 claims to occur and we want to calculate, based on this data
+what are the claim costs. First thought might be that we take 100 random costs from that 
+data over and over again,say one million times which yields
 
-#1 In the first example insurance data is being read from excel sheet and the claim costs are assumed 
-to be Poisson distributed. The data is being simulated and confidence intervals with corresponding 
-quantiles are printed.
+
+
+
+
+
+
+
 
 #2 In the second example I consider certain (imaginary) bonus classes in insurance companies and I will find out
 how steep difference there should be between classes taking account the variance in order to maximize revenue.
