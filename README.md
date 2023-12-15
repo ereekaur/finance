@@ -22,14 +22,23 @@ with the success probability of non zero claims / all claims. This in turn yield
 which gives expected value roughly 223k. In insurance company we would be interested what premium we could
 offer, say, with 99% confidence. In this case it would be 469k. If we want to put more weight on tails
 we could use Cauchy distribution with expected value of 36, this gives 600k as 95% confidence value
-which is a very extreme estimate.
+which is a very extreme estimate. One could go further in analysis by replacing the discete distribution
+of claim costs by a negative exponential function.
 
 
 
 #2 In the second example I consider certain (imaginary) bonus classes in insurance companies and I will find out
 how steep difference there should be between classes taking account the variance in order to maximize revenue.
 
-#3 The third example considers how much certain stock data deviates from Brownian motion or not.
+#3 The third example considers how much certain crypto currency data deviates from Brownian motion. It is 
+convenient to use logarithm differences. Here we have data from two different hours, and
+the histogram of logarithm differences are
+
+<img src="https://raw.githubusercontent.com/ereekaur/finance/main/ETH1.png" width="500" height="500">
+<img src="https://raw.githubusercontent.com/ereekaur/finance/main/ETH2.png" width="500" height="500">
+
+
+
 Here, I shall take a look at crypto-currencies and for the question "how much" is 
 being answered using several statistical tests.
 
