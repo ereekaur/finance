@@ -31,16 +31,20 @@ of claim costs by a negative exponential function.
 how steep difference there should be between classes taking account the variance in order to maximize revenue.
 
 #3 The third example considers how much certain crypto currency data deviates from Brownian motion. It is 
-convenient to use logarithm differences. Here we have data from two different hours, and
+convenient to use logarithm differences. Here we have data of two different hours for ethereum currency, and
 the histogram of logarithm differences are
 
 <img src="https://raw.githubusercontent.com/ereekaur/finance/main/ETH1.png" width="500" height="500">
 <img src="https://raw.githubusercontent.com/ereekaur/finance/main/ETH2.png" width="500" height="500">
 
+The Shapiro-Wilkinson test gives different p-values so that the other hour seems to behave like 
+Brownian motion and other does not. Let us now take a look at bitcoin data of last five years
+and try to find a three month timeframe when the bitcoin behave mostly like a Brownian motion
+and least like a Brownian motion. As there are 90 datapoints we will now use Kolmogorov test
+in the place of Shapiro Wilkinson.
 
 
-Here, I shall take a look at crypto-currencies and for the question "how much" is 
-being answered using several statistical tests.
+
 
 
 TODO:  
