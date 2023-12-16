@@ -3,7 +3,7 @@
  otherwise interesting in finance world.                                                      
 
  
-$${\color{red}Red}$$  In the first example I have insurance data, namely dates and claims costs for each day. 
+${\color{red} EXAMPLE 1}$  In the first example I have insurance data, namely dates and claims costs for each day. 
 Let us assume we can expect 100 claims to happen and we want to calculate, based on this data
 what are the claim costs. First thought might be that we take 100 random costs from that 
 data over and over again,say one million times which yields
