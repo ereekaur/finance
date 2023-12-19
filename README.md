@@ -8,10 +8,13 @@ different days. Let us assume we can expect 100 claims to happen next year and w
 data  given in claims.xlsx that what are the claim costs next year. First thought might be that we take 100 random 
 costs from that data over and over again, say one million times. This yields (left)
 
-<p float="left">
+
+
+<p float="left" align= "center">
   <img src="https://raw.githubusercontent.com/ereekaur/finance/main/onemillion.png" width="300" height="300">
   <img src="https://raw.githubusercontent.com/ereekaur/finance/main/totalcost.png" width="300" height="300">
 </p>
+
 
 and the expected value ~600k. It is no coincidence that the graph looks normally distributed (central limit theorem).
 However this approach does not take account that the claim costs is a sample from some distribution itself. It is therefore 
@@ -32,7 +35,7 @@ _EXAMPLE 3_ The third example considers how much certain crypto currency data de
 convenient to use logarithmic differences. Here we have data of two different hours for ethereum currency, and
 the histogram of logarithmic differences are
 
-<p float="left">
+<p float="left" align= "center">
  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/ETH1.png" width="300" height="300">
 <img src="https://raw.githubusercontent.com/ereekaur/finance/main/ETH2.png" width="300" height="300">
 </p>
