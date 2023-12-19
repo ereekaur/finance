@@ -9,8 +9,8 @@ data  given in claims.xlsx that what are the claim costs next year. First though
 costs from that data over and over again, say one million times. This yields (left)
 
 <p float="left">
-  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/onemillion.png" width="500" height="500">
-  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/totalcost.png" width="500" height="500">
+  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/onemillion.png" width="300" height="300">
+  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/totalcost.png" width="300" height="300">
 </p>
 
 and the expected value ~600k. It is no coincidence that the graph looks normally distributed (central limit theorem).
@@ -33,8 +33,8 @@ convenient to use logarithmic differences. Here we have data of two different ho
 the histogram of logarithmic differences are
 
 <p float="left">
- <img src="https://raw.githubusercontent.com/ereekaur/finance/main/ETH1.png" width="500" height="500">
-<img src="https://raw.githubusercontent.com/ereekaur/finance/main/ETH2.png" width="500" height="500">
+ <img src="https://raw.githubusercontent.com/ereekaur/finance/main/ETH1.png" width="300" height="300">
+<img src="https://raw.githubusercontent.com/ereekaur/finance/main/ETH2.png" width="300" height="300">
 </p>
 
 The Shapiro-Wilkinson test shall be used here as sample size << 2000, and it gives different p-values so that the
