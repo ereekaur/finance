@@ -58,19 +58,21 @@ There are also other models rather than normal distribution to use with logarith
 Levy-processes. One of these models is CGMY process
 
 
-_EXAMPLE 5_ Certain poker company has a tournament 30 player variant with 10$ buy-in where top five places are being paid.
-In addition if you knock out someone, you will get so called bounty from the dropped player. At the beginning everyone has 2.5$
-bounty which progressively increases such that your bounty increases buy 1.5x when you drop someone and you net 0.5x of the bounty. 
-Furthremore there is 1/1000 jackpot chance that you will get 1500$ and 1/100000 chance that you'll get 25000$. Suppose that
-c(35, 23, 18, 15, 13, 0) corresponds to the probabilities c(1/60, 2/60, 2/60, 2/60, 5/60, 18/19) in the sense of top 5
-placements and howmany * 1.25 * 1.2^X where X is a random variable taking values from {1,2,3,4} equally desbcribes
-bounty winnings. Simulating with this information we get distribution of earnings in 1000 games:
+_EXAMPLE 5_ Certain poker company has a 30 player variant tournament with 10$ buy-in where top five players are being paid.
+In addition if you 'knock out' someone during the tournament, you will get so called bounty prize; at the beginning 
+everyone has 2.5$ bounty which progressively increases such that your own bounty increases buy 1.5x when you drop someone and you gain 0.5x 
+of the bounty. Furthermore there is 1/1000 jackpot winning chance that you will get 1500$ and 1/100000 chance that you'll get 25000$. Suppose that
+the vector (35, 23, 18, 15, 13, 0) corresponds to the probabilities (1/60, 2/60, 2/60, 2/60, 5/60, 18/19) amongst top 5 players
+and Y * 1.25 * 1.2^X where X and Y are random variables taking values from {1,2,3,4} equally. 
+
+With this information we can simualte and get the following distribution of earnings in 1000 games:
 
 
 <p float="left" align= "center">
  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/earnings.png" width="400" height="400">
 </p>
 
+which yields expectation value of -578$.
 
 
 
