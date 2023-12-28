@@ -67,7 +67,9 @@ placements and howmany * 1.25 * 1.2^X where X is a random variable taking values
 bounty winnings. Simulating with this information we get distribution of earnings in 1000 games:
 
 
-
+<p float="left" align= "center">
+ <img src="https://raw.githubusercontent.com/ereekaur/finance/main/earnings.png" width="300" height="300">
+</p>
 
 
 
