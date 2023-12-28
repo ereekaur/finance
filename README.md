@@ -55,11 +55,26 @@ Suppose now that we have an option to buy ethereum with the price p and the expi
 expiration i.e. the option is so called American option. We want to find an optimal price for that option with Black-scholes formula.
 One needs the assumption that the data follows the geometric Brownian motion; however it turns out that in reality this does not happen often.
 There are also other models rather than normal distribution to use with logarithmic ratios. This leads to theory of so called 
-Levy-processes.
+Levy-processes. One of these models is CGMY process
+
+
+_EXAMPLE 5_ Certain poker company has a tournament 30 player variant with 10$ buy-in where top five places are being paid.
+In addition if you knock out someone, you will get so called bounty from the dropped player. At the beginning everyone has 2.5$
+bounty which progressively increases such that your bounty increases buy 1.5x when you drop someone and you net 0.5x of the bounty. 
+Furthremore there is 1/1000 jackpot chance that you will get 1500$ and 1/100000 chance that you'll get 25000$. Suppose that
+c(35, 23, 18, 15, 13, 0) corresponds to the probabilities c(1/60, 2/60, 2/60, 2/60, 5/60, 18/19) in the sense of top 5
+placements and howmany * 1.25 * 1.2^X where X is a random variable taking values from {1,2,3,4} equally desbcribes
+bounty winnings. Simulating with this information we get distribution of earnings in 1000 games:
 
 
 
-_EXAMPLE 4_ Portfolio selection problem: 
+
+
+
+
+
+
+_EXAMPLE 5_ Portfolio selection problem: 
 
 
 
