@@ -68,7 +68,7 @@ bounty winnings. Simulating with this information we get distribution of earning
 
 
 <p float="left" align= "center">
- <img src="https://raw.githubusercontent.com/ereekaur/finance/main/earnings.png" width="300" height="300">
+ <img src="https://raw.githubusercontent.com/ereekaur/finance/main/earnings.png" width="400" height="400">
 </p>
 
 
