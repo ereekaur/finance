@@ -68,7 +68,7 @@ equally. Can the player with above statistics break-even in this variant? With t
 
 
 <p float="left" align= "center">
- <img src="https://raw.githubusercontent.com/ereekaur/finance/main/earnings.png" width="400" height="400">
+ <img src="https://raw.githubusercontent.com/ereekaur/finance/main/earningss.png" width="400" height="400">
 </p>
 
 which gave the mean -578$.
