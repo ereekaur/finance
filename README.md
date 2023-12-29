@@ -58,21 +58,20 @@ There are also other models rather than normal distribution to use with logarith
 Levy-processes. One of these models is CGMY process
 
 
-_EXAMPLE 5_ Certain poker company has a 30 player variant tournament with 10$ buy-in where top five players are being paid.
-In addition if you 'knock out' someone during the tournament, you will get so called bounty prize; at the beginning 
-everyone has 2.5$ bounty which progressively increases such that your own bounty increases buy 1.5x when you drop someone and you gain 0.5x 
-of the bounty. Furthermore there is 1/1000 jackpot winning chance that you will get 1500$ and 1/100000 chance that you'll get 25000$. Suppose that
-the vector (35, 23, 18, 15, 13, 0) corresponds to the probabilities (1/60, 2/60, 2/60, 2/60, 5/60, 18/19) amongst top 5 players
-and Y * 1.25 * 1.2^X where X and Y are random variables taking values from {1,2,3,4} equally. 
-
-With this information we can simualte and get the following distribution of earnings in 1000 games:
+_EXAMPLE 5_ Certain poker company has a 30 player variant tournament with 10$ buy-in where top five placements being paid. In addition if you 'knock out'
+someone during the tournament, you will get so called bounty prize; at the beginning  everyone has a bounty of worth 2.5$ which progressively increases such that your 
+own bounty increases with 0.5*(bounty of the dropped player) and you will win half of the bounty of the dropped player. Furthermore with the chance of 1/1000
+you can win a jackpot worth 1500$ and with the chance of 1/100000 you can win 25000$. Suppose that the player is a skilled in a way that the vector (35, 23, 18, 15, 13, 0)
+corresponds to the probabilities  (1/100, 2/100, 3/100, 4/100, 8/100, 82/100) being placed 1 to 5 places and the tuples last element tells that you are placed 6-30 with the 
+probability of 82/100. Moreover let us also define randomvariable Y * 1.25 * 1.2^X describing bounty prize where X and Y are random variables itself taking values from {1,2,3,4}
+equally. Can the player with above statistics break-even in this variant? With the above information we can simukate and get the following distribution of earnings in 1000 games:
 
 
 <p float="left" align= "center">
  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/earnings.png" width="400" height="400">
 </p>
 
-which yields expectation value of -578$.
+which gave the mean -578$.
 
 
 
