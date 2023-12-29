@@ -1,9 +1,18 @@
 buy_in <- 10
+
+
+top_five_prizes <- c(35, 23, 18, 15, 13, 0)
+top_five_probabilities <- c(1/100, 2/100, 3/100, 4/100, 8/100, 82/100)
+
+
+
 simulate_tournament <- function() {
   num_players <- 30
-  prize <- sample(c(35, 23, 18, 15, 13, 0), 1, prob = c(1/60, 2/60, 2/60, 2/60, 5/60, 18/19))
+  prize <- sample(top_five_prizes, 1, prob = top_five_probabilities)
   total <- prize
+  
   for (i in 1:sample(0:4, 1)) {
+    
     jackpot <- sample(c(1500, 25000, 0), 1, prob = c(1/1000, 1/100000, 99899/100000))
     howmany <- sample(c(0,1,2,3,4), 1, prob = c(5/6, 1/12, 1/30, 1/25, 9/200))
     bounty <- howmany * 1.25 * 1.2^sample(1:4, 1)
