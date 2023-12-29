@@ -68,10 +68,10 @@ equally. Can the player with above statistics break-even in this variant? With t
 
 
 <p float="left" align= "center">
- <img src="https://raw.githubusercontent.com/ereekaur/finance/main/earningss.png" width="400" height="400">
+ <img src="https://raw.githubusercontent.com/ereekaur/finance/main/earning.png" width="400" height="400">
 </p>
 
-which gave that the player lost over 4800 dollars. As we can see in this simulation we did not hit jackpot; even with this high placementing top five the variance is devastating
+which gave that the player lost over 4200 dollars. As we can see in this simulation we did not hit jackpot; even with this high placementing top five the variance is devastating
 and earnings are highly relying on the jackpot.
 
 
