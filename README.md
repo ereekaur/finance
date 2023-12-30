@@ -72,7 +72,7 @@ described tournament with the given statistics ? With the above information we c
 </p>
 
 
-which gave that the player lost over 1200 dollars.
+which gave that the player is expected to lose 1200 dollars if he plays one thousand tournaments and break-even with the probability of 20%.
 
 
 
