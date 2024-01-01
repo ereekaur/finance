@@ -58,13 +58,13 @@ There are also other models rather than normal distribution to use with logarith
 Levy-processes. One of these models is CGMY process
 
 
-_EXAMPLE 5_ At certain poker company one can play a tournament consisting 30 players with 10$ buy-in where top five placements are being paid. In addition if you 'knock out'
-someone during the tournament, you will get so called bounty prize; at the beginning  everyone has a bounty of worth 2.5$ which progressively increases such that your 
+_EXAMPLE 5_ At certain poker site one can play a tournament format which consists of 30 players with 10$ buy-in where top five placements are being paid. In addition if you knock someone
+out of the tournament, you will get so called bounty prize; at the beginning  everyone has a bounty of worth 2.5$ which progressively increases such that your 
 own bounty increases with 0.5*(bounty of the dropped player) and you will win actual money same amount. Furthermore with the chance of 1/1000 you can win the jackpot worth 1500$.
-Suppose that some player is skilled in a way that the vector (70, 23, 18, 15, 13, 0) corresponds to the probability vector (3/100, 3/100, 4/100, 4/100, 4/100, 82/100) being placed 
-top five in the sense that the tuples last element tells that you are placed 6-30 with the  probability of 82/100 and winning nothing. Moreover let us also define the random variable
-Y * 1.25 * 1.2^X describing bounty prize where X and Y are random variables itself taking values from {1,2,3,4} uniformly. Is the player able to break-even in the 
-described tournament with the given statistics ? With the above information we can simulate and get the following distribution of earnings in 1000 games:
+Suppose that some player is skilled in a way that the prize vector (70, 23, 18, 15, 13, 0) corresponds to the probability vector (3/100, 3/100, 4/100, 4/100, 4/100, 82/100).
+Moreover let us also define a random variable Y * 1.25 * 1.2^X describing bounty prize where X and Y are random variables itself taking values from {1,2,3,4} uniformly. 
+Is the player able to break-even in the described tournament with the given statistics ? With the above information we can simulate and get the following distribution 
+of earnings after 1000 games:
 
 
 <p float="left" align= "center">
@@ -72,7 +72,7 @@ described tournament with the given statistics ? With the above information we c
 </p>
 
 
-which tells us that the player is expected to lose 1200 dollars if he plays one thousand tournaments and break-even with the probability of 20%.
+This graph tells us that the player is expected to lose 1200 dollars if he plays one thousand tournaments and break-even with the probability of 20%.
 
 
 
