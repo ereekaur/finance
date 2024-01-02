@@ -60,11 +60,12 @@ Levy-processes. One of these models is CGMY process
 
 _EXAMPLE 5_ At certain poker site one can play a tournament format which consists of 30 players where the buy-in is 10$. In addition top five placements has a prize. 
 In addition if you knock someone out of the tournament, you will get so called bounty prize; at the beginning  everyone has a bounty of worth 2.5$ which progressively
-increases such that your  own bounty increases with 0.5*(bounty of the dropped player) and you will win actual money same amount. Furthermore with the chance of 1/1000
-you can win the jackpot worth 1500$. Suppose that some player is skilled in a way that the prize vector (70, 23, 18, 15, 13, 0) corresponds to the probability vector 
-(3/100, 3/100, 4/100, 4/100, 4/100, 82/100). Moreover let us also define a random variable Y * 1.25 * 1.2^X describing the bounty prize where X and Y are random variables 
-itself taking values from {1,2,3,4} uniformly and (4/20, 10/20, 3/20, 2/20, 1/20) contains the probabilities of  knocking out zero to four players. Is the player able to
-break-even in the described tournament with the given statistics ? With the above information we can simulate and get the following distribution of earnings after 1000 games:
+increases such that your own bounty increases with 0.5*(bounty of the dropped player) and you will win actual money same amount. If one wins the whole tournament one 
+can keep his own bounty. Furthermore the chance of winning the jackpot worth 1050$ after knocking someone out is 1/1000. Suppose that some player is skilled in a way that
+the prize vector (70, 23, 18, 15, 13, 0) corresponds to the probability vector  (3/100, 3/100, 4/100, 4/100, 4/100, 82/100). Moreover let us also define a random variable
+Y * 1.25 * 1.2^X describing the bounty prize where X and Y are random variables itself taking values from {1,2,3,4} uniformly and (4/20, 10/20, 3/20, 2/20, 1/20) contains 
+the probabilities of  knocking out zero to four players. Is the player able to break-even in the described tournament with the given statistics ? After simulating we get 
+the following distribution of earnings after 1000 games:
 
 
 <p float="left" align= "center">
