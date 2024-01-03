@@ -16,7 +16,7 @@ costs from that data over and over again, say, one million times. This yields th
 </p>
 
 
-with the expected value ~600k. It is no coincidence that the graph looks normally distributed (central limit theorem).
+with the expected value ~600k. It is no coincidence that the graph looks normally distributed because of the central limit theorem.
 However this approach does not take account that the claim costs is a sample from some distribution itself. It is therefore 
 convenient to assume that the sample is from (for example) binomial distribution with the success rate non zero claims / all claims. 
 This in turn yields the distribution on the right-hand side above and  gives expected value roughly 223k. In insurance company we would
@@ -28,10 +28,15 @@ any conclusions and on the other hand if one wants to use all data points then t
 
 
 
-_EXAMPLE 2_ In the second example I consider certain (imaginary) bonus classes in insurance companies and I will find out
-how steep difference there should be between classes taking account the variance in order to maximize revenue.
+_EXAMPLE 2_ In the second example I consider certain bonus classes in a insurance company and I will try to find out
+how steep difference there should be between classes taking account the variance in order to maximize 'revenue'. In
+what follows is that we have the problem 
 
-
+$$
+\begin{equation}
+min ~\sigma^2, ~~\sum_{i=1}^6 a_ib_i = t  ~~ \text{and} ~~  (b_i) ~\text{is decreasing}\\
+\end{equation}
+$$
 
 _EXAMPLE 3_ The third example considers how much certain crypto currency data deviates from Brownian motion. It is 
 convenient to use logarithmic differences. Here we have data of two different hours for ethereum currency, and
