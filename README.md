@@ -29,14 +29,17 @@ any conclusions and on the other hand if one wants to use all data points then t
 
 
 _EXAMPLE 2_ In the second example I consider certain bonus classes in a insurance company and I will try to find out
-how steep difference there should be between classes taking account the variance in order to maximize 'revenue'. In
-what follows is that we have the problem 
+how steep difference there should be between classes taking account the variance in order to maximize revenue and minimize risks 
+from the client point of view. In what follows is that we have the problem:
 
 $$
 \begin{equation}
-min ~\sigma^2, ~~\sum_{i=1}^6 a_ib_i = t  ~~ \text{and} ~~  (b_i) ~\text{is decreasing}\\
+min ~\sigma^2, ~~\sum_{i=1}^6 a_i c_i = M  ~~ \text{and} ~~  (b_i) ~\text{is a decreasing sequence}\\
 \end{equation}
 $$
+
+where M is the average of the claim costs, a=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class if no claims occurred in 
+three years.
 
 _EXAMPLE 3_ The third example considers how much certain crypto currency data deviates from Brownian motion. It is 
 convenient to use logarithmic differences. Here we have data of two different hours for ethereum currency, and
@@ -69,8 +72,8 @@ increases such that your own bounty increases with 0.5*(bounty of the dropped pl
 can keep his own bounty. Furthermore the chance of winning the jackpot worth 1050$ after knocking someone out is 1/1000. Suppose that some player is skilled in a way that
 the prize vector (70, 23, 18, 15, 13, 0) corresponds to the probability vector  (3/100, 3/100, 4/100, 4/100, 4/100, 82/100). Moreover let us also define a random variable
 Y * 1.25 * 1.2^X describing the bounty prize where X and Y are random variables itself taking values from {1,2,3,4} uniformly and (4/20, 10/20, 3/20, 2/20, 1/20) contains 
-the probabilities of  knocking out zero to four players. Is the player able to break-even in the described tournament with the given statistics ? After simulating thousand 
-times thousand games we get the following distribution:
+the probabilities of  knocking out zero to four players. Is the player able to break-even in the described tournament with the given statistics ? After simulating one thousand 
+times one thousand tournaments we get the following distribution:
 
 
 <p float="left" align= "center">
