@@ -29,19 +29,35 @@ any conclusions and on the other hand if one wants to use all data points then t
 
 
 _EXAMPLE 2_ In the second example I consider certain bonus classes in a insurance company and I will try to find out
-how steep difference there should be between classes taking account the variance in order to maximize revenue and minimize risks 
-from the client point of view. In what follows is that we have the following MOLP problem:
+how steep difference there should be between classes in order to minimize variance
+between classes. In what follows is that we have the following QP problem:
 
 $$
 \begin{equation}
-min ~ \frac{1}{N}\sum_{i=1}^N a_i(c_i - A)^2, ~~\sum_{i=1}^6 a_i c_i = M  ~~ \text{and} ~~  (b_i) ~\text{is a decreasing sequence}\\
+min ~ \frac{1}{N}\sum_{i=1}^N a_i(c_i - A)^2, ~~\sum_{i=1}^6 a_i c_i = M  ~~ \text{and} ~~  (c_i) ~\text{is a decreasing sequence}\\
 \end{equation}
 $$
 
 where M is the average of the claim costs, a=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class if no claims occurred in 
 three years. It is convenient to assume that claims admits Poisson distribution. Thus we get the following transition matrix between
 bonus classes and we can calculate this Markov process stationary point by calculating the eigenvector of the transpose of the 
-transition matrix. If we choose the eigen vector which lies on the simplex we get the distribution.
+transition matrix. If we choose the eigen vector which lies on the simplex we get the distribution. Let us now extend the QP problem
+into MOP problem namely add another objective function.
+
+
+$$
+\begin{bmatrix}
+1 - e^{-\lambda} & 0 & e^{-\lambda} & 0 & 0 & 0 \\
+1 - e^{-\lambda} & e^{-\lambda} & 0 & 0 & 0 & 0 \\
+1 - (1 + \lambda)e^{-\lambda} & 1 - e^{-\lambda} & 0 & e^{-\lambda} & 0 & 0 \\
+1 - \left(1 + \lambda + 0.5\lambda^2\right)e^{-\lambda} & 0 & 0 & 0 & e^{-\lambda} & 0 \\
+1 - \left(1 + \lambda + 0.5\lambda^2\right)e^{-\lambda} & 1 - (1 + \lambda)e^{-\lambda} & \lambda e^{-\lambda} & 0 & 0 & e^{-\lambda} \\
+1 - \left(1 + \lambda + 0.5\lambda^2\right)e^{-\lambda} & 1 - (1 + \lambda)e^{-\lambda} & \lambda e^{-\lambda} & 0 & 0 & e^{-\lambda}
+\end{bmatrix}
+$$
+
+
+
 
 _EXAMPLE 3_ The third example considers how much certain crypto currency data deviates from Brownian motion. It is 
 convenient to use logarithmic differences. Here we have data of two different hours for ethereum currency, and
