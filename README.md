@@ -105,7 +105,10 @@ This graph tells us that the player is expected to lose 1200 dollars if he plays
 
 
 
-_EXAMPLE 5_ Portfolio selection problem: 
+_EXAMPLE 5_ Optimization example. Suppose we have a sparse matrix containing information about movies that certain use has watched (i.e. zeros or ones). Suppose
+that we have another matrix that contains info about the genres of different movies, then the product of these matrices tells us the popularity of different genres
+amongst users. For the product it is useful to know algorithsm that uses the sparsity of these matrices. Let us now proceed further and consider the problem of
+movie recommendations. We may have some constraints so that the problem is in fact LP problem.
 
 
 
