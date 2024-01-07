@@ -78,10 +78,18 @@ a Brownian motion. We are lead to
 
 
 Suppose now that we have an option to buy ethereum with the price p and the expire date is x and one can exercise it anytime before the date of
-expiration i.e. the option is so called American option. We want to find an optimal price for that option with Black-scholes formula.
-One needs the assumption that the data follows the geometric Brownian motion; however it turns out that in reality this does not happen often.
-There are also other models rather than normal distribution to use with logarithmic ratios. This leads to theory of so called 
-Levy-processes. One of these models is CGMY process
+expiration i.e. the option is so called European option. For European call option it is well-known that the  Black-scholes formula
+
+$$
+\begin{equation}
+ callOptionPrice = S(0) \varphi  \bigg{(} \frac{rt +\sigma^2 \frac{t}{2} - log ( K/S(0))}{\sigma\sqrt{t}}\bigg{)}  -  K e^{-rt} \varphi \bigg{(}\frac{rt +\sigma^2 \frac{t}{2} - log ( K/S(0))}{\sigma\sqrt{t}} \bigg{)}
+\end{equation}
+$$ 
+
+gives the arbirtrage free price provided that data follows geometric brownian motion. Here
+where K is the strike price, t is the exercise time, $\varphi$ is the normal distribution function $S(0)$ is the price at the time $t=0$ and  $\sigma^2$ is the variance.
+however it seems by the empirical data that data does not follow geometric brownian motion. There are also other models rather than normal distribution to use with 
+logarithmic ratios. This leads to theory of so called  Levy-processes. One of these models is CGMY process
 
 
 _EXAMPLE 5_ At certain poker site one can play a tournament format which consists of 30 players where the buy-in is 10$. In addition top five placements has a prize. 
