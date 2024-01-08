@@ -82,14 +82,25 @@ expiration i.e. the option is so called European option. For European call optio
 
 $$
 \begin{equation}
- callOptionPrice = S(0) \varphi  \bigg{(} \frac{rt +\sigma^2 \frac{t}{2} - log ( K/S(0))}{\sigma\sqrt{t}}\bigg{)}  -  K e^{-rt} \varphi \bigg{(}\frac{rt +\sigma^2 \frac{t}{2} - log ( K/S(0))}{\sigma\sqrt{t}} \bigg{)}
+ callOptionPrice = S(0) \varphi  \bigg{(} \frac{rt +{\color{orange}\sigma^2}\frac{t}{2} - log ( K/S(0))}{\sigma\sqrt{t}}\bigg{)}  -  K e^{-rt} \varphi \bigg{(}\frac{rt +{\color{orange}\sigma^2} \frac{t}{2} - log ( K/S(0))}{\sigma\sqrt{t}} \bigg{)}
 \end{equation}
 $$ 
 
 gives the arbirtrage free price provided that data follows geometric brownian motion. Here
-where K is the strike price, t is the exercise time, $\varphi$ is the normal distribution function $S(0)$ is the price at the time $t=0$ and  $\sigma^2$ is the variance.
-however it seems by the empirical data that data does not follow geometric brownian motion. There are also other models rather than normal distribution to use with 
-logarithmic ratios. This leads to theory of so called  Levy-processes. One of these models is CGMY process
+where K is the strike price, t is the exercise time, $\varphi$ is the normal distribution function $S(0)$ is the price at the time $t=0$ and  ${\color{orange}\sigma^2}$ is the variance.
+However, it seems by the empirical data that data does not follow geometric brownian motion in general. There are also other models rather than normal distribution to use with 
+logarithmic ratios. This leads to theory of so called Levy-processes whose caracteristic function is given by
+
+
+$$ \phi(u) = \exp\{it\left(i \alpha u - \frac{1}{2} \sigma^2 u^2 + \int_{-\infty}^{\infty} \(e^{iux} - 1 - \chi_{B(0,1)}            \right) \Pi(dx))\} $$
+
+
+
+
+
+
+
+One of these models is CGMY process
 
 
 _EXAMPLE 5_ At certain poker site one can play a tournament format which consists of 30 players where the buy-in is 10$. In addition top five placements has a prize. 
@@ -116,9 +127,12 @@ This graph tells us that the player is expected to lose 1200 dollars if he plays
 _EXAMPLE 5_ Optimization example. Suppose we have a sparse matrix containing information about movies that certain use has watched (i.e. zeros or ones). Suppose
 that we have another matrix that contains info about the genres of different movies, then the product of these matrices tells us the popularity of different genres
 amongst users. For the product it is useful to know algorithsm that uses the sparsity of these matrices. Let us now proceed further and consider the problem of
-movie recommendations. We may have some constraints so that the problem is in fact LP problem.
+movie recommendations. We may have some constraints so that the problem is in fact LP problem Ax = b. Where A is
 
 
+<p float="left" align= "center">
+ <img src="https://raw.githubusercontent.com/ereekaur/finance/main/SPARSE.png" width="400" height="400">
+</p>
 
 
 TODO:  
