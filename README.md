@@ -1,6 +1,5 @@
 
-Here I have collected and calculated some common cases which could occur or are
- otherwise interesting in finance world.                                                      
+Here I have studied different cases which I have encountered and which are related to optimization or financial world
 
  
 _EXAMPLE 1_  In the first example I have insurance data from three years, namely dates and claims costs from 68
@@ -124,17 +123,27 @@ This graph tells us that the player is expected to lose 1200 dollars if he plays
 
 
 
-_EXAMPLE 5_ Optimization example. Suppose we have a sparse matrix containing information about movies that certain use has watched (i.e. zeros or ones). Suppose
+_EXAMPLE 5_ Optimization example. Suppose we have a sparse binardy matrix containing information about movies that certain use has watched. Suppose further
 that we have another matrix that contains info about the genres of different movies, then the product of these matrices tells us the popularity of different genres
-amongst users. For the product it is useful to know algorithsm that uses the sparsity of these matrices. Let us now proceed further and consider the problem of
-movie recommendations. We may have some constraints so that the problem is in fact LP problem Ax = b. Where A is the 100x100 matrix 
+amongst users. Our aim is to consider the problem of movie recommendations. Let A be a 1M x 5000 matrix and B be the 5000 x 10 matrix
 
-
-<p float="left" align= "center">
+ <p float="left" align= "center">
  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/SPARSE.png" width="400" height="400">
 </p>
 
-which tells which of the 100 different movies 100 users has watched and b is 
+which tells which of the 100 different movies 100 users has watched. We now have the problem
+
+$$
+\begin{equation*}
+min ~c^t x \quad
+Ax \leq b \quad
+x \geq 0
+\end{equation*}
+$$
+
+where c^T is a weight vector, b contains maximum movies we want to recommend
+
+
 TODO:  
 
 1) Add SL/XL -insurance analyses example
