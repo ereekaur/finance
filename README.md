@@ -125,8 +125,7 @@ This graph tells us that the player is expected to lose 1200 dollars if he plays
 
 _EXAMPLE 5_ Optimization example. Suppose we have a sparse binardy matrix containing information about movies that certain use has watched. Suppose further
 that we have another matrix that contains info about the genres of different movies, then the product of these matrices tells us the popularity of different genres
-amongst users. Our aim is to consider the problem of movie recommendations. Let A be a 1M x 5000 matrix and B be the 5000 x 10 matrix
-
+amongst users. Our aim is to consider the problem of movie recommendations. Let A be a 20000 x 5000 matrix where $A_{ij}$ tells that user i has watched the movie j
  <p float="left" align= "center">
  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/SPARSE.png" width="400" height="400">
 </p>
