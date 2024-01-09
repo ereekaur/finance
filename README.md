@@ -22,8 +22,8 @@ convenient to assume that the sample is from (for example) binomial distribution
 This in turn yields the distribution on the right-hand side above and  gives expected value roughly 223k. In insurance company we would
 be interested in what premium we could offer, say, with 99% confidence. In this case it would be 469k without profit marginal. If we want to put
 more weight on tails we could use Cauchy distribution with the expected value of 36 which gives 600k with 99% confidence which is a very extreme estimate. 
-One could go further in analysis by replacing the discrete distribution of claim costs by a negative exponential function. It is notable that linear 
-the regression here does not give any meaningful results; first of all at year level there are too few data-points (though p-value is very small) to draw 
+One could go further in analysis by replacing the discrete distribution of claim costs by a negative exponential function. It is notable that the linear 
+regression in this case does not give any meaningful results; first of all, at year level there are too few data-points (though p-value is very small) to draw 
 any conclusions and on the other hand if one wants to use all data points then the model is not useful since time is not explanatory factor for one claim cost itself.
 
 
@@ -34,7 +34,7 @@ between classes. In what follows is that we have the following QP problem:
 
 $$
 \begin{equation}
-min ~ \frac{1}{N}\sum_{i=1}^N a_i(c_i - A)^2, ~~\sum_{i=1}^6 a_i c_i = M  ~~ \text{and} ~~  (c_i) ~\text{is a decreasing sequence}\\
+min ~ \frac{1}{N}\sum_{i=1}^N a_i(c_i - \mu)^2, ~~\sum_{i=1}^6 a_i c_i = M  ~~ \text{and} ~~  (c_i) ~\text{is a decreasing sequence}\\
 \end{equation}
 $$
 
