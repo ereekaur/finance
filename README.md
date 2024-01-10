@@ -142,21 +142,17 @@ $$
 
 where c is a weight vector, b contains maximum amount of movies we want to recommend. Solving system like this calculating every feasible solution and taking maximum would take literally forever. Therefore
 there has been an interest finding algorithms solving big systems with constraints. Note that in the case of square matrix it is well known that the time complexity is polynomial. But in the rectangle case
-it is not so simple. Systems like this are calculated using so called simplex method which goes through edge points of xx dimensional in the R^nm space.
-Solving this system in Python directly using REVISED simplex method took 187 seconds
+it is not so simple. Systems like this are calculated using so called simplex method which goes through edge points of xx dimensional in the R^nm space. From the picture
 
-
-
+.
 
 <p float="left" align= "center">
-  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/linear.png" width="300" height="300">
-  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/polynom.png" width="300" height="300">
+ <img src="https://raw.githubusercontent.com/ereekaur/finance/main/SimplexVsHighs.png" width="400" height="400">
 </p>
 
 
-
-
-
+it becomes clear that for our matrix 10000 x 1000 it would take some time to solve the system using revised simplex; interior point methods are more efficient. Here I used Python library called linprog and compared
+the Highs and RevisedSimplex methods. But as we here have a sparse matrix we could something even better.
 
 
 TODO:  
