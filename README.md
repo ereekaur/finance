@@ -123,24 +123,28 @@ This graph tells us that the player is expected to lose 1200 dollars if he plays
 
 
 
-_EXAMPLE 5_ Optimization example. Suppose we have a sparse binardy matrix containing information about movies that certain use has watched. Suppose further
-that we have another matrix that contains info about the genres of different movies, then the product of these matrices tells us the popularity of different genres
-amongst users. Our aim is to consider the problem of movie recommendations. Let A be a 20000 x 5000 matrix where $A_{ij}$ tells that user i has watched the movie j
+_EXAMPLE 5_ Optimization example. Suppose we have a sparse binary matrix containing information about watched movies. Our aim is to consider the problem of movie recommendations. Suppose
+that 20000 users have all liked the same movie. Let A be a 20000 x 5000 matrix where $A_{ij}$ tells that user i has watched the movie j
+ 
+ 
  <p float="left" align= "center">
  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/SPARSE.png" width="400" height="400">
 </p>
 
-which tells which of the 100 different movies 100 users has watched. We now have the problem
 
 $$
 \begin{equation*}
-min ~c^t x \quad
+max ~c^t x \quad
 Ax \leq b \quad
 x \geq 0
 \end{equation*}
 $$
 
-where c^T is a weight vector, b contains maximum movies we want to recommend
+where c is a weight vector, b contains maximum amount of movies we want to recommend. Solving system like this calculating every feasible solution and taking maximum would take forever. Therefore
+systems like this are calculated using so called simplex method which goes through edge points of xx dimensional in the R^nm space. However in this particular case here there exists
+even better methods which takes advantage of the fact that most of the entries in the matrix are zeros.
+
+Solving this system in Python directly using simplex method took 187 seconds
 
 
 TODO:  
