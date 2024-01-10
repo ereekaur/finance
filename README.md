@@ -146,6 +146,19 @@ it is not so simple. Systems like this are calculated using so called simplex me
 Solving this system in Python directly using REVISED simplex method took 187 seconds
 
 
+
+
+<p float="left" align= "center">
+  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/linear.png" width="300" height="300">
+  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/polynom.png" width="300" height="300">
+</p>
+
+
+
+
+
+
+
 TODO:  
 
 1) Add SL/XL -insurance analyses example
