@@ -124,7 +124,7 @@ This graph tells us that the player is expected to lose 1200 dollars if he plays
 
 
 _EXAMPLE 5_ Optimization example. Suppose we have a sparse binary matrix containing information about watched movies. Our aim is to consider the problem of movie recommendations. Suppose
-that 20000 users have all liked the same movie. Let A be a 20000 x 5000 matrix where $A_{ij}$ tells that user i has watched the movie j
+that 20000 users have all liked the same movie. Let A be a 10000 x 1000 matrix where $A_{ij}$ tells that user i has watched the movie j
  
  
  <p float="left" align= "center">
@@ -140,11 +140,10 @@ x \geq 0
 \end{equation*}
 $$
 
-where c is a weight vector, b contains maximum amount of movies we want to recommend. Solving system like this calculating every feasible solution and taking maximum would take forever. Therefore
-systems like this are calculated using so called simplex method which goes through edge points of xx dimensional in the R^nm space. However in this particular case here there exists
-even better methods which takes advantage of the fact that most of the entries in the matrix are zeros.
-
-Solving this system in Python directly using simplex method took 187 seconds
+where c is a weight vector, b contains maximum amount of movies we want to recommend. Solving system like this calculating every feasible solution and taking maximum would take literally forever. Therefore
+there has been an interest finding algorithms solving big systems with constraints. Note that in the case of square matrix it is well known that the time complexity is polynomial. But in the rectangle case
+it is not so simple. Systems like this are calculated using so called simplex method which goes through edge points of xx dimensional in the R^nm space.
+Solving this system in Python directly using REVISED simplex method took 187 seconds
 
 
 TODO:  
