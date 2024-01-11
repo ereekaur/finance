@@ -2,15 +2,12 @@
 Here I have studied different cases which I have encountered and which are related to optimization or financial world
 
  
-$\color{red} EXAMPLE ~ 1 $ In the first example I have insurance data from three years, namely dates and claims costs from 68
+$\color{red} Example ~ 1$ In the first example I have insurance data from three years, namely dates and claims costs from 68
 different days. Let us assume we can expect 100 claims to happen next year and we want to calculate, based on the 
 data  given in claims.xlsx that what are the claim costs next year. First thought might be that we sum 100 random 
 costs from that data over and over again, say, one million times. This yields the following distribution (left)
 
  
- <p float="left" align= "center">
- <img src="https://raw.githubusercontent.com/ereekaur/finance/main/SPARSE.png" width="400" height="400">
-</p>
 
 
 <p float="left" align= "center">
@@ -31,7 +28,7 @@ any conclusions and on the other hand if one wants to use all data points then t
 
 
 
-$\color{red} EXAMPLE ~ 2 $ In the second example I consider certain bonus classes in a insurance company and I will try to find out
+$\color{red} Example ~ 2$ In the second example I consider certain bonus classes in a insurance company and I will try to find out
 how steep difference there should be between classes in order to minimize variance
 between classes. In what follows is that we have the following QP problem:
 
@@ -65,7 +62,7 @@ into MOP problem namely add another objective function.
 
 
 
-$\color{red} EXAMPLE ~ 3 $ The third example considers how much certain crypto currency data deviates from Brownian motion. It is 
+$\color{red} Example  ~ 3$ The third example considers how much certain crypto currency data deviates from Brownian motion. It is 
 convenient to use logarithmic differences. Here we have data of two different hours for ethereum currency, and
 the histogram of logarithmic differences are
 
@@ -105,7 +102,7 @@ and the integral can be calculated using fast fourier transform.
 One of these models is CGMY process (ADD)
 
 
-$\color{red} EXAMPLE ~ 4 $ At certain poker site one can play a tournament format which consists of 30 players where the buy-in is 10$. In addition top five placements has a prize. 
+$\color{red} EXAMPLE ~ 4$ At certain poker site one can play a tournament format which consists of 30 players where the buy-in is 10$. In addition top five placements has a prize. 
 In addition if you knock someone out of the tournament, you will get so called bounty prize; at the beginning  everyone has a bounty of worth 2.5$ which progressively
 increases such that your own bounty increases with 0.5*(bounty of the dropped player) and you will win actual money same amount. If one wins the whole tournament one 
 can keep his own bounty. Furthermore the chance of winning the jackpot worth 1050$ after knocking someone out is 1/1000. Suppose that some player is skilled in a way that
@@ -123,7 +120,7 @@ times one thousand tournaments we get the following distribution:
 This graph tells us that the player is expected to lose 1200 dollars if he plays one thousand tournaments and break-even with the probability of 20%.
 
 
-$\color{red} EXAMPLE ~ 5  $ Optimization example. Suppose we have a sparse binary matrix containing information about watched movies. Our aim is to consider the problem of movie recommendations. Suppose
+$\color{red} Example  ~ 5$ Optimization example. Suppose we have a sparse binary matrix containing information about watched movies. Our aim is to consider the problem of movie recommendations. Suppose
 that 10000 users have all liked the same particular movie. Let A be a 10000 x 1000 matrix where $A_{ij}$ tells that user i has watched the movie j and 
 
 $${\color{green}
@@ -134,8 +131,16 @@ x \geq 0
 \end{equation*}}
 $$
 
+ <p float="left" align= "center">
+ <img src="https://raw.githubusercontent.com/ereekaur/finance/main/SPARSE.png" width="400" height="400">
+  <em>100x100 block from the matrix A </em>
+</p>
+
+
+
+
 where c is a weight vector, b contains maximum amount of movies we want to recommend. Note that in the case of square matrix it is well known that the time complexity is polynomial as the well-known
-Gauss-Jordan method has the time complexity of $ O(n^3)$. For solving rectangle systems the system is being made in the equation form and then so called Simplex method is usually introduced which at every
+Gauss-Jordan method has the time complexity of $O(n^3)$. For solving rectangle systems the system is being made in the equation form and then so called Simplex method is usually introduced which at every
 iteration step goes throguh the vertices of the polygon whose vertices are cutting points of linear subspaces constructed from the constraints. There are also other methods called interior point methods in which
 the convergence to the solution is made within interior points. From the picture
 
