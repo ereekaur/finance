@@ -121,7 +121,7 @@ This graph tells us that the player is expected to lose 1200 dollars if he plays
 
 
 $\color{red} Example  ~ 5$ Optimization example. Suppose we have a sparse binary matrix containing information about watched movies. Our aim is to consider the problem of movie recommendations. Suppose
-that 10000 users have all liked the same particular movie. Let A be a 10000 x 1000 matrix where $A_{ij}$ tells that user i has watched the movie j and 
+that 100000 users have all liked the same particular movie. Let A be a 100000 x 1000 matrix where $A_{ij}$ tells that user i has watched the movie j and 
 
 $${\color{green}
 \begin{equation*}
@@ -139,7 +139,7 @@ $$
 
 
 
-where c is a weight vector, b contains maximum amount of movies we want to recommend. Note that in the case of square matrix it is well known that the time complexity is polynomial as the well-known
+where c is a weight vector, b contains maximum amount of movies we want to recommend. Note that in the case of square matrix it is well known that the time complexity is at most polynomial as the well-known
 Gauss-Jordan method has the time complexity of $O(n^3)$. For solving rectangle systems the system is being made in the equation form and then so called Simplex method is usually introduced which at every
 iteration step goes throguh the vertices of the polygon whose vertices are cutting points of linear subspaces constructed from the constraints. There are also other methods called interior point methods in which
 the convergence to the solution is made within interior points. From the picture
@@ -148,8 +148,9 @@ the convergence to the solution is made within interior points. From the picture
  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/SimplexVsHighs.png" width="400" height="400">
 </p>
 
-it comes clear that for our matrix 10000 x 1000 it would take some time to solve the system using (revised) simplex method; interior point methods are more efficient. Here I used Python library called linprog and compared
-the Highs and Revised simplex. But in the case of sparse matrix like in this example we should take care about sparsity from the memory usage point of view and from the fact that there are so many zeros in the matrix.
+it comes clear that for our matrix 100000 x 1000 we would need ridiculously amount of time to solve the system using (revised) simplex method; interior point methods are more efficient. Here I used Python library called linprog and compared
+the Highs and Revised simplex. For a 100000 x 1000 matrix the calculation using highs took roughly one minute. Can this be reduced further? As our matrix does not have any a prior structure to take advantage it might be good idea to 
+consider matrix reordering i.e. find permutation of rows and columns which reduces fill-in when factorizing the system.
 
 
 TODO:  
