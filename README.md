@@ -38,7 +38,7 @@ min ~ \frac{1}{N}\sum_{i=1}^N a_i(c_i - \mu)^2, ~~\sum_{i=1}^6 a_i c_i = M  ~~ \
 \end{equation}
 $$
 
-where M is the average of the claim costs, a=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class if no claims occurred in 
+where M is the average of the claim costs, c=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class if no claims occurred in 
 three years. It is convenient to assume that claims admits Poisson distribution. Thus we get the transition matrix
 
 
@@ -53,9 +53,10 @@ $$
 \end{bmatrix}
 $$
 
-between bonus classes and we can calculate this Markov process stationary point by calculating the eigenvector of the transpose of the 
-transition matrix. If we choose the eigen vector which lies on the simplex we get the distribution. Let us now extend the QP problem
-into MOP problem namely add another objective function.
+between bonus classes and we can calculate this Markov process' stationary point by calculating the eigenvector of the transpose of the 
+transition matrix. If we choose the eigenvector which lies on the simplex we get the sought probability distribution. Let us now extend 
+the QP problem into MOP problem, that is, we add another objective function. From the insurance company point of view we would like to
+maximize revenue (how to measure that?)
 
 
 
