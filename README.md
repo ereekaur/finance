@@ -1,5 +1,5 @@
 
-Here I have studied different cases which I have encountered and which are related to optimization or financial world
+Here I have studied different cases which I have encountered and which are related to optimization or financial world.
 
  
 $\color{red} Example ~ 1$ In the first example I have insurance data from three years, namely dates and claims costs from 68
@@ -93,7 +93,7 @@ $$
 gives the arbirtrage free price provided that data follows geometric brownian motion. Here
 where K is the strike price, t is the exercise time, $\varphi$ is the normal distribution function $S(0)$ is the price at the time $t=0$ and  ${\color{orange}\sigma^2}$ is the variance.
 However, it seems by the empirical data that data does not follow geometric brownian motion in general. There are also other models rather than normal distribution to use with 
-logarithmic ratios. This leads to theory of so called Levy-processes whose caracteristic function is given by
+logarithmic ratios. This leads to theory of so called Levy-processes whose characteristic function is
 
 
 $$ \phi(u) = \exp\{it\left(i \alpha u - \frac{1}{2} \sigma^2 u^2 + \int_{-\infty}^{\infty} \(e^{iux} - 1 - \chi_{B(0,1)}            \right) \Pi(dx))\} $$
@@ -103,7 +103,7 @@ and the integral can be calculated using fast fourier transform.
 One of these models is CGMY process (ADD)
 
 
-$\color{red} EXAMPLE ~ 4$ At certain poker site one can play a tournament format which consists of 30 players where the buy-in is 10$. In addition top five placements has a prize. 
+$\color{red} Example ~ 4$ At certain poker site one can play a tournament format which consists of 30 players where the buy-in is 10$. In addition top five placements has a prize. 
 In addition if you knock someone out of the tournament, you will get so called bounty prize; at the beginning  everyone has a bounty of worth 2.5$ which progressively
 increases such that your own bounty increases with 0.5*(bounty of the dropped player) and you will win actual money same amount. If one wins the whole tournament one 
 can keep his own bounty. Furthermore the chance of winning the jackpot worth 1050$ after knocking someone out is 1/1000. Suppose that some player is skilled in a way that
@@ -141,16 +141,16 @@ $$
 
 
 where c is a weight vector, b contains maximum amount of movies we want to recommend. Note that in the case of square matrix it is well known that the time complexity is at most polynomial as the well-known
-Gauss-Jordan method has the time complexity of $O(n^3)$. For solving rectangle systems the system is being made in the equation form and then so called Simplex method is usually introduced in which at every
-iteration step one check the values at the vertices which are cutting points of the linear subspaces constructed from the constraints. There are also other methods called interior point methods in which
+Gauss-Jordan method has the time complexity of $O(n^3)$. For solving rectangle systems the system is being transformed into equation form and then so called Simplex method is usually introduced, in which at every
+iteration step one checks the values at the vertices which are cutting points of the linear subspaces constructed from the constraints. There are also other methods called interior point methods in which
 the convergence towards to the solution is made within interior points. From the picture
 
 <p float="left" align= "center">
  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/SimplexVsHighs.png" width="400" height="400">
 </p>
 
-it comes clear that for our matrix 100000 x 1000 we would need ridiculous amount of time to solve the system using (revised) simplex method; interior point methods are more efficient. Here I used Python library called linprog and compared
-the Highs and Revised simplex. For a 100000 x 1000 matrix the calculation using highs took roughly one minute. Can this be reduced further? As our matrix does not have any a prior structure to take advantage it might be good idea to 
+it comes clear that for our 100000 x 1000 matrix we would need ridiculous amount of time to solve the system using (revised) simplex method; interior point methods are more efficient. Here I used Python library called linprog and compared
+the Highs and Revised simplex. For a 100000 x 1000 matrix the calculation using highs took roughly one minute. Can this be reduced further? As our matrix does not have any a priori structure to take advantage it might be good idea to 
 consider matrix reordering i.e. find permutation of rows and columns which reduces fill-in when factorizing the system.
 
 
