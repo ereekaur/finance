@@ -140,10 +140,10 @@ $$
 
 
 
-where c is a weight vector, b contains maximum amount of movies we want to recommend. Note that in the case of square matrix it is well known that the time complexity is at most polynomial as the well-known
-Gauss-Jordan method has the time complexity of $O(n^3)$. For solving rectangle systems the system is being transformed into equation form and then so called Simplex method is usually introduced, in which at every
-iteration step one checks the values at the vertices which are cutting points of the linear subspaces constructed from the constraints. There are also other methods called interior point methods in which
-the convergence towards to the solution is made within interior points. From the picture
+where c is a weight vector, b contains the maximum amount of movies we want to recommend. Note that in the case of square matrix it is well known that the time complexity is at most polynomial as the well-known
+Gauss-Jordan method has the time complexity of $O(n^3)$. For solving rectangle systems the system is usually being transformed into equation form and then so called Simplex method is introduced in which at every
+iteration step one checks the values at the vertices which are intersection points of the linear subspaces constructed from the constraints. There also exist so called interior point methods in which the convergence
+towards to the solution is made within interior points. From the picture
 
 <p float="left" align= "center">
  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/SimplexVsHighs.png" width="400" height="400">
