@@ -19,7 +19,7 @@ costs from the data over and over again, say, one million times. This yields the
 with the expected value ~600k. It is no coincidence that the graph looks normally distributed because of the central limit theorem.
 However this approach does not take account that the claim costs is a sample from some distribution itself. It is therefore 
 convenient to assume that the sample is from (for example) binomial distribution with the success rate of non zero claims / all claims. 
-This in turn yields the distribution on the right-hand side above and  gives the expected value roughly 223k. In insurance company we would
+This in turn yields the distribution on the right-hand side above and  gives the expected value roughly 223k. In an insurance company we would
 be interested in what premium we could offer, say, with 99% confidence. In this case it would be 469k without profit marginal. If we want to put
 more weight on tails we could use Cauchy distribution with the expected value of 36 which gives 600k with 99% confidence which is a very extreme estimate. 
 One could go further in analysis by replacing the discrete distribution of claim costs by a negative exponential function. It is notable that the linear 
@@ -34,11 +34,11 @@ between classes. In what follows is that we have the following QP problem:
 
 $$
 \begin{equation}
-min ~ \frac{1}{N}\sum_{i=1}^N a_i(c_i - \mu)^2, ~~\sum_{i=1}^6 a_i c_i = M  ~~ \text{and} ~~  (c_i) ~\text{is a decreasing sequence}\\
+min ~ \frac{1}{N}\sum_{i=1}^N a_i(c_i - \mu)^2, ~~\sum_{i=1}^6 a_i c_i = \mu \\
 \end{equation}
 $$
 
-where M is the average of the claim costs, c=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class if no claims occurred in 
+where $\mu$ is the average of the claim costs, c=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class if no claims occurred in 
 three years. It is convenient to assume that claims admits Poisson distribution. Thus we get the transition matrix
 
 $$
