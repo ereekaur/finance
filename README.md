@@ -104,7 +104,7 @@ In addition if you knock someone out of the tournament, you will get so called b
 increases such that your own bounty increases with 0.5*(bounty of the dropped player) and you will win actual money same amount. If one wins the whole tournament one 
 can keep his own bounty. Furthermore the chance of winning the jackpot worth 1050$ after knocking someone out is 1/1000. Suppose that some player is skilled in a way that
 the prize vector (70, 23, 18, 15, 13, 0) corresponds to the probability vector  (3/100, 3/100, 4/100, 4/100, 4/100, 82/100). Moreover let us also define a random variable
-Y * 1.25 * 1.2^X describing the bounty prize where X and Y are random variables itself taking values from {1,2,3,4} uniformly and (4/20, 10/20, 3/20, 2/20, 1/20) contains 
+$Y * 1.25 * 1.2^X$ describing the bounty prize where X and Y are random variables itself taking values from {1,2,3,4} uniformly and (4/20, 10/20, 3/20, 2/20, 1/20) contains 
 the probabilities of  knocking out zero to four players, respectively. Is the player able to break-even in the described tournament with the given statistics ? After simulating 
 one thousand times one thousand tournaments we get the following distribution:
 
@@ -117,8 +117,10 @@ one thousand times one thousand tournaments we get the following distribution:
 This graph tells us that the player is expected to lose 1200 dollars if he plays one thousand tournaments and break-even with the probability of 20%.
 
 
-$\color{red} Example  ~ 5$ Optimization example. Suppose we have a sparse binary matrix containing information about watched movies. Our aim is to consider the problem of movie recommendations. Suppose
-that 100000 users have all liked the same particular movie. Let A be a 100000 x 1000 matrix where $A_{ij}$ tells that user i has watched the movie j and consider
+$\color{red} Example  ~ 5$ Optimization example. Suppose we have a sparse binary matrix containing information about watched movies meaning that
+1 = watched and 0 = not watched. Our aim is to consider a problem of movie recommendation for certain user. Suppose that 100000 users have all liked
+the same particular movie. Let A be a 100000 x 1000 matrix where $A_{ij}$ tells that user i has watched the movie j with the exception that on the i.th row
+for which user we want to find the recommendation we swap to roles of zeros and ones. Consider
 
 $${\color{green}
 \begin{equation*}
