@@ -38,7 +38,7 @@ min ~ \frac{1}{N}\sum_{i=1}^N a_i(c_i - \mu)^2, ~~\sum_{i=1}^6 a_i c_i = \mu \\
 \end{equation}
 $$
 
-where $\mu$ is the average of the claim costs, c=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class if no claims occurred in 
+where $\mu$ is the predetermined average of the claim costs, c=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class if no claims occurred in 
 three years. It is convenient to assume that claims admits Poisson distribution. Thus we get the transition matrix
 
 $$
@@ -59,7 +59,7 @@ maximize revenue.
 
 
 
-$\color{red} Example  ~ 3$ The third example considers how much certain crypto currency data deviates from Brownian motion. It is 
+$\color{red} Example  ~ 3$ This example considers how much certain crypto currency data deviates from Brownian motion. It is 
 convenient to use logarithmic differences. Here we have data of two different hours for ethereum currency, and
 the histogram of logarithmic differences are
 
