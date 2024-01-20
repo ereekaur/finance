@@ -34,7 +34,7 @@ between classes. In what follows is that we have the following QP problem:
 
 $$
 \begin{equation}
-min ~ \frac{1}{N}\sum_{i=1}^N a_i(c_i - \mu)^2, ~~\sum_{i=1}^6 a_i c_i = \mu \\
+min ~ \sum_{i=1}^6 a_i(c_i - \mu)^2, ~~\sum_{i=1}^6 a_i c_i = \mu \\
 \end{equation}
 $$
 
