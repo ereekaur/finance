@@ -26,6 +26,13 @@ One could go further in analysis by replacing the discrete distribution of claim
 regression in this case does not give any meaningful results; first of all, at year level there are too few data-points (though p-value is very small) to draw 
 any conclusions and on the other hand if one wants to use all data points then the model is not useful since the time is not explanatory factor for one claim cost itself.
 
+(From the Bayes point of view let us take Weibull distribution as the prior and then calculate posterior distribution using FFT?)
+
+
+
+
+
+
 
 
 $\color{red} Example ~ 2$ In the second example I consider certain bonus classes in a insurance company and I will try to find out
