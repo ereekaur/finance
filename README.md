@@ -26,7 +26,8 @@ One could go further in analysis by replacing the discrete distribution of claim
 regression in this case does not give any meaningful results; first of all, at year level there are too few data-points (though p-value is very small) to draw 
 any conclusions and on the other hand if one wants to use all data points then the model is not useful since the time is not explanatory factor for one claim cost itself.
 
-(From the Bayes point of view let us take Weibull distribution as the prior and then calculate posterior distribution using FFT?)
+Yet another ubiquitous distribution, Weibull distribution, could be fitted to data for analysis. If we want to approach as in Bayes using it as the prior leads complex calculations but which
+could overcome using FFT? Good candidate for finding posterior distribution is to use gamma distribution as prior since its conjugate is gamma as well and thus results are easy to achieve.
 
 
 
@@ -62,7 +63,7 @@ $$
 between bonus classes and we can calculate this Markov process' stationary point by calculating the eigenvector of the transpose of the 
 transition matrix. If we choose the eigenvector which lies on the simplex we get the sought probability distribution. Let us now extend 
 the QP problem into MOP problem, that is, we add another objective function. From the insurance company point of view we would like to
-maximize revenue. 
+maximize revenue but author did not solve this problem yet.
 
 
 
