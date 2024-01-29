@@ -67,9 +67,8 @@ maximize revenue but author did not solve this problem yet.
 
 $$
 \begin{align*}
-\text{minimize} \quad & \alpha \sum_{i=1}^6 a_i(c_i - \mu)^2 + \\
-\text{maximize}\quad \beta \sum_{i=1}^6 a_i c_i n_i\\
-\text{wrt} \quad & \sum_{i=1}^6 a_i c_i = \mu, \alpha + \beta = 1
+&\text{minimize}  \quad \alpha \sum_{i=1}^6 a_i(c_i - \mu)^2 + \beta\sum_{i=1}^6 a_i c_i n_i \\
+\text{wrt} \quad & \sum_{i=1}^6 a_i c_i = \mu \quad \quad\alpha + \beta = 1
 \end{align*}
 $$
 
