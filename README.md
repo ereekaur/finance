@@ -158,6 +158,24 @@ the Highs and Revised simplex. For a 100000 x 1000 matrix the calculation using 
 consider matrix reordering i.e. find permutation of rows and columns which reduces fill-in when factorizing the system.
 
 
+
+
+
+$\color{red} Example  ~ 6$ Election prediction. 
+
+
+
+<p float="left" align= "center">
+ <img src="https://raw.githubusercontent.com/ereekaur/finance/main/swings.svg" width="400" height="400">
+</p>
+
+
+
+
+
+
+
+
 TODO:  
 
 1) Add SL/XL -insurance analyses example
