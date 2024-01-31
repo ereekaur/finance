@@ -67,7 +67,7 @@ maximize revenue but author did not solve this problem yet.
 
 $$
 \begin{align*}
-&\text{minimize}  \quad \alpha \sum_{i=1}^6 a_i(c_i - \mu)^2 + \beta\sum_{i=1}^6 a_i c_i n_i \\
+&\text{minimize}  \quad \alpha \sum_{i=1}^6 a_i(c_i - \mu)^2 + \beta\sum_{i=1}^6 a_i c_i \\
 \text{wrt} \quad & \sum_{i=1}^6 a_i c_i = \mu \quad \quad\alpha + \beta = 1
 \end{align*}
 $$
@@ -177,13 +177,13 @@ $\color{red} Example  ~ 6$ Election prediction. Before first round, according ga
 
 My own prediction for the second round is
 
- 60% from HALLA-AHO --> STUBB 
+ 60% of votes from HALLA-AHO --> STUBB 
  
- 50% from REHN --> STUBB
+ 50% of votes from REHN --> STUBB
  
- 80% from LI + OTHERS --> HAAVISTO
+ 80% of votes from LI + OTHERS --> HAAVISTO
 
-and using multiregression for data from past years 
+Using multiregression for data from past years 
 
 years <- c(1994, 2000, 2006, 2012)
 round1_support_A <- c(25.9, 40.0, 46.31, 36.96)
