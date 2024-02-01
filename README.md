@@ -166,36 +166,7 @@ consider matrix reordering i.e. find permutation of rows and columns which reduc
 
 
 
-$\color{red} Example  ~ 6$ Election prediction. Before first round, according gallups one had that
 
-
-
-<p float="left" align= "center">
- <img src="https://raw.githubusercontent.com/ereekaur/finance/main/swings.svg" width="400" height="400">.
-</p>
-
-
-My own prediction for the second round is
-
- 60% of votes from HALLA-AHO --> STUBB 
- 
- 50% of votes from REHN --> STUBB
- 
- 80% of votes from LI + OTHERS --> HAAVISTO
-
-Using multiregression for data from past years 
-
-years <- c(1994, 2000, 2006, 2012)
-round1_support_A <- c(25.9, 40.0, 46.31, 36.96)
-round1_support_B <- c(22.0, 34.4, 24.06, 18.76)
-round2_result_A <- c(53.9, 51.6, 51.79, 62.59)
-round2_result_B <- c(46.1, 48.4, 48.21, 37.41)
-
-Combining these models I anticipate that the second round result will be
-
-STUBB 51.6
-
-HAAVISTO 48.4
 
 
 TODO:  
