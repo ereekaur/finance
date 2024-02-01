@@ -132,8 +132,7 @@ This graph tells us that the player is expected to lose 1200 dollars if he plays
 
 $\color{red} Example  ~ 5$ Optimization example. Suppose we have a sparse binary matrix containing information about watched movies meaning that
 1 = watched and 0 = not watched. Our aim is to consider a problem of movie recommendation for certain user. Suppose that 100000 users have all liked
-the same particular movie. Let A be a 100000 x 1000 matrix where $A_{ij}$ tells that user i has watched the movie j with the exception that on the i.th row
-for which user we want to find the recommendation we swap to roles of zeros and ones. Consider
+the same particular movie. Let A be a 100000 x 1000 matrix where $A_{ij}$ tells that user i has watched the movie j. Consider
 
 $${\color{green}
 \begin{equation*}
