@@ -38,7 +38,7 @@ could overcome using FFT? Good candidate for finding posterior distribution is t
 
 $\color{red} Example ~ 2$ In this example I shall consider certain bonus classes in a insurance company and I will try to find out
 how steep difference there should be between classes in order to minimize variance
-between classes. In what follows is that we have the following QP problem:
+between classes and maximize revenue. In what follows is that we have the following QP problem:
 
 $$
 \begin{equation}
@@ -46,8 +46,8 @@ min ~ \sum_{i=1}^6 a_i(c_i - \mu)^2, ~~\sum_{i=1}^6 a_i c_i = \mu \\
 \end{equation}
 $$
 
-where $\mu$ is the predetermined average of the claim costs, c=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class if no claims occurred in 
-three years, a_i is probability of being in class i. It is convenient to assume that claims admits Poisson distribution. Thus we get the transition matrix
+for the minimization where $\mu$ is the predetermined average of the claim costs, c=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class, a_i is probability of being in class i. 
+It is convenient to assume that claims occurence admits Poisson distribution; then we could have, for example the following transition matrix:
 
 $$
 \begin{bmatrix}
@@ -62,15 +62,16 @@ $$
 
 between bonus classes and we can calculate this Markov process' stationary point by calculating the eigenvector of the transpose of the 
 transition matrix. If we choose the eigenvector which lies on the simplex we get the sought probability distribution. Let us now extend 
-the QP problem into MOP problem, that is, we add another objective function. From the insurance company point of view we would like to
-maximize revenue but author did not solve this problem yet.
+the QP problem. To this end let
 
 $$
 \begin{align*}
 &\text{minimize}  \quad \alpha \sum_{i=1}^6 a_i(c_i - \mu)^2 + \beta\sum_{i=1}^6 a_i c_i \\
 \text{wrt} \quad & \sum_{i=1}^6 a_i c_i = \mu \quad \quad\alpha + \beta = 1
 \end{align*}
-$$
+$$ 
+
+where $\alpha$ and $\beta$ are weighting elements.
 
 $\color{red} Example  ~ 3$ This example considers how much certain crypto currency data deviates from Brownian motion. It is 
 convenient to use logarithmic differences. Here we have data of two different hours for ethereum currency, and
