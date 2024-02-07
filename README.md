@@ -57,21 +57,6 @@ $$
 $$ 
 
  where $\mu$ is a predetermined average of the claim costs, c=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class, $a_i$ is the probability of being in class i. 
-With proper weighting elements $\alpha$ and $\beta$ I think it is possible to formulate well-defined problem 
-
-
-
-$$
-\begin{align*}
-&\text{minimize}  \quad \alpha\sum_{i=1}^6 a_i(c_i - \mu)^2 - \beta\sum_{i=1}^6 a_ic_i \\
-\text{s.t} \quad & \sum_{i=1}^6 a_i c_i = \mu, \qquad \alpha + \beta = 1.
-\end{align*}
-$$ 
-
-
-
-
- 
 It is convenient to assume that claims occurence admits Poisson distribution; then we could have, for example the following transition matrix:
 
 $$
@@ -87,6 +72,70 @@ $$
 
 between bonus classes and we can calculate this Markov process' stationary point by calculating the eigenvector of the transpose of the 
 transition matrix. If we choose the eigenvector which lies on the simplex we get the desired probability distribution $a$.
+
+
+
+
+
+
+ 
+With proper weighting elements $\alpha$ and $\beta$ I think it is possible to formulate well-defined problem 
+
+
+
+$$
+\begin{align*}
+&\text{minimize}  \quad \alpha\sum_{i=1}^6 a_i(c_i - \mu)^2 - \beta\sum_{i=1}^6 a_ic_i \\
+\text{s.t} \quad & \sum_{i=1}^6 a_i c_i = \mu, \qquad \alpha + \beta = 1.
+\end{align*}
+$$ 
+
+For brevity let $\beta := 1-\alpha$. We thus reduced MOP problem back to QP problem. Let us solve it with python code
+
+```python
+
+import cvxpy as cp
+import numpy as np
+
+def solve_optimization_problem(a, mu, alpha):
+    
+    c = cp.Variable(len(a))
+
+    # objective function
+    objective = cp.Maximize(cp.sum(cp.multiply(a, c)))
+
+    # constraints
+    constraints = [cp.sum(cp.multiply(a, c)) == mu]
+
+    prob = cp.Problem(objective, constraints)
+    prob.solve()
+
+    optimal_c = c.value
+
+    return optimal_c
+
+# example
+a = np.array([0.2, 0.1, 0.05, 0.3, 0.15, 0.2]) 
+mu = 10  
+alpha = 0.5  # example value
+
+optimal_c = solve_optimization_problem(a, mu, alpha)
+print("Optimal values of c_i:", optimal_c)
+
+
+```
+
+which gives
+
+```python
+Optimal values of c_i: [ 8.95208668 15.0555552  25.32032479  6.60474165 11.10780715  8.95208668]
+```
+
+
+
+
+ 
+
 
 ${\color{green} (to~ be ~continued)}$
 
