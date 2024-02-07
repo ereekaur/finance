@@ -37,16 +37,41 @@ could overcome using FFT? Good candidate for finding posterior distribution is t
 
 
 $\color{red} Example ~ 2$ In this example I shall consider certain bonus classes in a insurance company and I will try to find out
-how steep difference there should be between classes in order to minimize variance
-between classes and maximize revenue. In what follows is that we have the following QP problem:
+how steep difference there should be between classes. From client point of view we want to minimize variance
+between classes and maximize revenue from the company point of view. In what follows is that we have the following QP problem:
 
 $$
-\begin{equation}
-min ~ \sum_{i=1}^6 a_i(c_i - \mu)^2, ~~\sum_{i=1}^6 a_i c_i = \mu \\
-\end{equation}
-$$
+\begin{align*}
+&\text{minimize}  \quad \alpha \sum_{i=1}^6 a_i(c_i - \mu)^2 \\
+\end{align*}
+$$ 
 
-for the minimization where $\mu$ is the predetermined average of the claim costs, c=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class, a_i is probability of being in class i. 
+but we can extend this into MOP problem via
+
+$$
+\begin{align*}
+&\text{minimize}  \quad \sum_{i=1}^6 a_i(c_i - \mu)^2 \\
+&\text{maximize}  \quad  \sum_{i=1}^6 a_ic_i \\
+\text{s.t} \quad & \sum_{i=1}^6 a_i c_i = \mu
+\end{align*}
+$$ 
+
+ where $\mu$ is a predetermined average of the claim costs, c=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class, $a_i$ is the probability of being in class i. 
+With proper weighting elements $\alpha$ and $\beta$ I think it is possible to formulate well-defined problem 
+
+
+
+$$
+\begin{align*}
+&\text{minimize}  \quad \alpha\sum_{i=1}^6 a_i(c_i - \mu)^2 - \beta\sum_{i=1}^6 a_ic_i \\
+\text{s.t} \quad & \sum_{i=1}^6 a_i c_i = \mu, \qquad \alpha + \beta = 1.
+\end{align*}
+$$ 
+
+
+
+
+ 
 It is convenient to assume that claims occurence admits Poisson distribution; then we could have, for example the following transition matrix:
 
 $$
@@ -61,17 +86,9 @@ $$
 $$
 
 between bonus classes and we can calculate this Markov process' stationary point by calculating the eigenvector of the transpose of the 
-transition matrix. If we choose the eigenvector which lies on the simplex we get the sought probability distribution. Let us now extend 
-the QP problem. To this end let
+transition matrix. If we choose the eigenvector which lies on the simplex we get the desired probability distribution $a$.
 
-$$
-\begin{align*}
-&\text{minimize}  \quad \alpha \sum_{i=1}^6 a_i(c_i - \mu)^2 + \beta\sum_{i=1}^6 a_i c_i \\
-\text{wrt} \quad & \sum_{i=1}^6 a_i c_i = \mu \quad \quad\alpha + \beta = 1
-\end{align*}
-$$ 
-
-where $\alpha$ and $\beta$ are weighting elements.
+${\color{green} (to~ be ~continued)}$
 
 $\color{red} Example  ~ 3$ This example considers how much certain crypto currency data deviates from Brownian motion. It is 
 convenient to use logarithmic differences. Here we have data of two different hours for ethereum currency, and
