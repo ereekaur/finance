@@ -27,7 +27,16 @@ regression in this case does not give any meaningful results; first of all, at y
 any conclusions and on the other hand if one wants to use all data points then the model is not useful since the time is not explanatory factor for one claim cost itself.
 
 Yet another ubiquitous distribution, Weibull distribution, could be fitted to data for analysis. If we want to approach as in Bayes using it as the prior leads complex calculations but which
-could overcome using FFT? Good candidate for finding posterior distribution is to use gamma distribution as prior since its conjugate is gamma as well and thus results are easy to achieve.
+could overcome using FFT? Good candidate for finding posterior distribution is to use gamma distribution as prior since its conjugate is gamma as well and thus calculations are simpler.
+Let us use Gamma(20,300) as prior which gives us the following posterior distribution:
+
+<p float="left" align= "center">
+ <img src="https://raw.githubusercontent.com/ereekaur/finance/main/bayesplot.png" width="300" height="300">
+</p>
+
+
+From here we can say with the confidence level of 99% that the total costs are less than 459332.7
+
 
 
 
