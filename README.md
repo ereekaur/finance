@@ -51,7 +51,7 @@ between classes and maximize revenue from the company point of view. In what fol
 
 $$
 \begin{align*}
-&\text{minimize}  \quad \alpha \sum_{i=1}^6 a_i(c_i - \mu)^2 \\
+&\text{minimize}  \quad \sum_{i=1}^6 a_i(c_i - \mu)^2 \\
 \end{align*}
 $$ 
 
@@ -65,7 +65,7 @@ $$
 \end{align*}
 $$ 
 
- where $\mu$ is a predetermined average of the claim costs, c=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class, $a_i$ is the probability of being in class i. 
+where $\mu$ is a predetermined average of the claim costs, c=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class, $a_i$ is the probability of being in class i. 
 It is convenient to assume that claims occurence admits Poisson distribution; then we could have, for example the following transition matrix:
 
 $$
@@ -88,8 +88,7 @@ transition matrix. If we choose the eigenvector which lies on the simplex we get
 
 
  
-With proper weighting elements $\alpha$ and $\beta$ I think it is possible to formulate well-defined problem 
-
+With weighting elements $\alpha$ and $\beta$ lets us try to formulate a well-defined problem 
 
 
 $$
@@ -139,11 +138,9 @@ which gives
 ```python
 Optimal values of c_i: [ 8.95208668 15.0555552  25.32032479  6.60474165 11.10780715  8.95208668]
 ```
+However finding a Pareto optimal solution for MOLP problem seems to be trivial, thus something has to be adjusted.
 
 
-
-
- 
 
 
 ${\color{green} (to~ be ~continued)}$
