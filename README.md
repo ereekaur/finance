@@ -212,7 +212,7 @@ $\color{red} Example  ~ 5$ Election prediction. Before first round, according ga
 </p>
 
 
-My own prediction for the second round is
+My own prediction for the second round was
 
  60% of votes from HALLA-AHO --> STUBB 
 
