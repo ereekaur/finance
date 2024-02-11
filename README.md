@@ -26,9 +26,9 @@ One could go further in analysis by replacing the discrete distribution of claim
 regression in this case does not give any meaningful results; first of all, at year level there are too few data-points (though p-value is very small) to draw 
 any conclusions and on the other hand if one wants to use all data points then the model is not useful since the time is not explanatory factor for one claim cost itself.
 
-Yet another ubiquitous distribution, Weibull distribution, could be fitted to data for analysis. If we want to approach as in Bayes using it as the prior leads complex calculations but which
-could overcome using FFT? Good candidate for finding posterior distribution is to use gamma distribution as prior since its conjugate is gamma as well and thus calculations are simpler.
-Let us use Gamma(20,300) as prior which gives us the following posterior distribution:
+Yet another ubiquitous distribution, Weibull distribution, could be fitted to data for analysis. If we want to approach as in Bayes i.e. using the Weibull distribution as the prior
+leads us into complex calculations but which we could overcome using fast fourier transform (FFT). A good candidate for prior is the gamma distribution since its conjugate is also a gamma distribution
+and thus calculations will become simpler. Using Gamma(20,300) as a prior gives us the following posterior distribution:
 
 <p float="left" align= "center">
  <img src="https://raw.githubusercontent.com/ereekaur/finance/main/bayesplot.png" width="300" height="300">
@@ -45,7 +45,7 @@ From here we can say with the confidence level of 99% that the total costs are l
 
 
 
-$\color{red} Example ~ 2$ In this example I shall consider certain bonus classes in a insurance company and I will try to find out
+$\color{red} Example ~ 2$ In this example I shall consider certain bonus classes in an insurance company and I will try to find out
 how steep difference there should be between classes. From client point of view we want to minimize variance
 between classes and maximize revenue from the company point of view. In what follows is that we have the following QP problem:
 
@@ -156,9 +156,10 @@ the histogram of logarithmic differences are
 </p>
 
 The Shapiro-Wilkinson test for normality shall be used here as sample size << 2000, and it gives different p-values so that the
-other data seems to behave like  Brownian motion and other does not. It should be notice that some care is need when considering
-normality tests, for example QQ-plot might be needed. Let us now take a look at bitcoin data of last  five years and try to find a 
-three month timeframe when the bitcoin behave mostly like a Brownian motion and least like a Brownian motion. We are lead to
+other data seems to behave like  Brownian motion and other does not. It should be noticed that some care is needed when considering
+normality tests, for example it might be a good idea to use the QQ-plot. Let us now take a look at bitcoin data of last  five years
+and try to find a three month timeframe when the bitcoin behave mostly like a Brownian motion and least like a Brownian motion. 
+We are lead to
 
 
 
