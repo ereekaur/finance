@@ -228,7 +228,7 @@ round1_support_B <- c(22.0, 34.4, 24.06, 18.76)
 round2_result_A <- c(53.9, 51.6, 51.79, 62.59)
 round2_result_B <- c(46.1, 48.4, 48.21, 37.41)
 
-Combining these models with certain weights I anticipated on 1.1.2024 that the second round result will be
+Combining these models with certain weights I anticipated on 29.1.2024 (see [this commit](https://github.com/ereekaur/finance/commit/2451939020ad682150a9c02d9bdd4b3c0f23f414)) that the second round result will be
 
 STUBB 51.6
 
