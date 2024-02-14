@@ -37,9 +37,43 @@ and thus calculations will become simpler. Using Gamma(20,300) as a prior gives 
 
 From here we can say with the confidence level of 99% that the total costs are less than 459332.7
 
+Finally, let us take a look at Panjer recursion which considers a compound random variables. Its efficiency lies in omitting convolution calculations.
+Here, the claim costs are a compound of Poisson distribution and for example, Weibull distribution. It is notable that the Poisson assumption can be replaced here exactly
+by two different discrete distributions which are Bin and Negbin.
 
 
+So far I did not manage to find panjer algorithm from the latest actuar package in R, but using aggregateDist one can approximate the PCF. However, lets try to implement
+panjer recursion in python in order to get PDF.
 
+```python
+
+plambda = 10
+
+
+def f(j):
+
+    return gamma.pdf(j, 2, 3) 
+
+
+def poissongamma(k):
+
+    vector = []
+    for i in range(1, k + 1):
+        if i == 1:
+            vector.append(math.exp(-plambda))
+        else:
+            element = vector[0] + sum(plambda / i * f(j) * vector[i - j - 1] for j in range(1, i + 1))
+            vector.append(element)
+    
+    total_sum = sum(vector)
+    vector = [x / total_sum for x in vector]
+    
+    return vector
+
+k = 6000 
+result_vector = poissongamma(k)
+
+```
 
 
 
@@ -220,15 +254,7 @@ My own prediction for the second round was
 
  80% of votes from LI + OTHERS --> HAAVISTO
 
-Using multiregression for data from past years 
-
-years <- c(1994, 2000, 2006, 2012)
-round1_support_A <- c(25.9, 40.0, 46.31, 36.96)
-round1_support_B <- c(22.0, 34.4, 24.06, 18.76)
-round2_result_A <- c(53.9, 51.6, 51.79, 62.59)
-round2_result_B <- c(46.1, 48.4, 48.21, 37.41)
-
-Combining these models with certain weights I anticipated on 29.1.2024 (see [this commit](https://github.com/ereekaur/finance/commit/2451939020ad682150a9c02d9bdd4b3c0f23f414)) that the second round result will be
+Using multiregression for data from past years combined with certain weights I anticipated on 29.1.2024 (see [this commit](https://github.com/ereekaur/finance/commit/2451939020ad682150a9c02d9bdd4b3c0f23f414)) that the second round result will be
 
 STUBB 51.6
 
