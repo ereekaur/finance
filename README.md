@@ -39,39 +39,30 @@ From here we can say with the confidence level of 99% that the total costs are l
 
 Finally, let us take a look at Panjer recursion which considers a compound random variables. Its efficiency lies in omitting convolution calculations.
 Here, the claim costs are a compound of Poisson distribution and for example, Weibull distribution. It is notable that the Poisson assumption can be replaced here exactly
-by two different discrete distributions which are Bin and Negbin.
+by two different discrete distributions (to ensure numerical stability) which are Bin and Negbin. There are also considerations in pushing this further but the Panjer
+recursion has to be modified.
 
 
-So far I did not manage to find panjer algorithm from the latest actuar package in R, but using aggregateDist one can approximate the PCF. However, lets try to implement
-panjer recursion in python in order to get PDF.
+So far I did not manage to find panjer algorithm from the latest actuar package in R, but using aggregateDist one can approximate the PCF. However, it is too hard to implement
+panjer recursion in order to get PDF of the compound distribution
 
-```python
+```R
 
-plambda = 10
+lambda <- 60
+iter <- 10000
+severity <- dgamma(1:iter, shape = 2, scale = 30)
+g <- numeric(length = iter)
+g[1] <- exp(lambda * (severity[1] - 1))
 
+integration_range <- 5100
 
-def f(j):
-
-    return gamma.pdf(j, 2, 3) 
-
-
-def poissongamma(k):
-
-    vector = []
-    for i in range(1, k + 1):
-        if i == 1:
-            vector.append(math.exp(-plambda))
-        else:
-            element = vector[0] + sum(plambda / i * f(j) * vector[i - j - 1] for j in range(1, i + 1))
-            vector.append(element)
-    
-    total_sum = sum(vector)
-    vector = [x / total_sum for x in vector]
-    
-    return vector
-
-k = 6000 
-result_vector = poissongamma(k)
+for(n in 1:(iter-1)) {
+  g_next <- 0
+  for (i in 1:n) { 
+    g_next <- g_next + (lambda/n) * i * severity[i + 1] * g[n - i + 1] 
+  }
+  g[n + 1] <- g_next
+}
 
 ```
 
