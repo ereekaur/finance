@@ -43,18 +43,18 @@ by two different discrete distributions (to ensure numerical stability) which ar
 recursion has to be modified.
 
 
-So far I did not manage to find panjer algorithm from the latest actuar package in R, but using aggregateDist one can approximate the PCF. However, it is too hard to implement
-panjer recursion in order to get PDF of the compound distribution
+So far I did not manage to find Panjer algorithm from the latest actuar package in R, but using aggregateDist one can approximate the PCF. However, it is not too hard to implement
+Panjer recursion in order to get PDF of the compound distribution:
 
 ```R
 
-lambda <- 60
+
+lambda <- 35
 iter <- 10000
-severity <- dgamma(1:iter, shape = 2, scale = 30)
+severity <- dweibull(1:iter, shape = 2, scale = 80)
 g <- numeric(length = iter)
 g[1] <- exp(lambda * (severity[1] - 1))
-
-integration_range <- 5100
+integration_range <- 3650
 
 for(n in 1:(iter-1)) {
   g_next <- 0
@@ -62,12 +62,20 @@ for(n in 1:(iter-1)) {
     g_next <- g_next + (lambda/n) * i * severity[i + 1] * g[n - i + 1] 
   }
   g[n + 1] <- g_next
+  
 }
 
+integrated_value <- sum(g[1:integration_range])
+plot(g, type = "l", xlab = "Iteration", ylab = "Value of g", main = "Compound distribution")
+abline(v = integration_range, col = "red", lty = 2)
+cat(integrated_value)
 ```
+This gives
 
-
-
+```
+0.9908385
+```
+Here I used monetary unit such that one unit corresponds to 100 euros.
 
 
 $\color{red} Example ~ 2$ In this example I shall consider certain bonus classes in an insurance company and I will try to find out
@@ -113,7 +121,7 @@ transition matrix. If we choose the eigenvector which lies on the simplex we get
 
 
  
-With weighting elements $\alpha$ and $\beta$ lets us try to formulate a well-defined problem 
+With weighting elements $\alpha$ and $\beta$ let us try to formulate the problem 
 
 
 $$
@@ -123,7 +131,7 @@ $$
 \end{align*}
 $$ 
 
-For brevity let $\beta := 1-\alpha$. We thus reduced MOP problem back to QP problem. Let us solve it with python code
+For brevity let $\beta := 1-\alpha$. We thus reduced MOP problem back to QP problem. Let us try to solve it with python code:
 
 ```python
 
@@ -163,7 +171,8 @@ which gives
 ```python
 Optimal values of c_i: [ 8.95208668 15.0555552  25.32032479  6.60474165 11.10780715  8.95208668]
 ```
-However finding a Pareto optimal solution for MOLP problem seems to be trivial, thus something has to be adjusted.
+However finding a Pareto optimal solution for MOLP problem seems to be trivial, thus something in our model has to be adjusted
+namely the way we try to measure revenue.
 
 
 
@@ -228,7 +237,7 @@ one thousand times one thousand tournaments we get the following distribution:
 
 This graph tells us that the player is expected to lose 1200 dollars if he plays one thousand tournaments and break-even with the probability of 20%.
 
-$\color{red} Example  ~ 5$ Election prediction. Before first round, according gallups one had that
+$\color{red} Example  ~ 5$ Election prediction. Before first round, according to gallups one had that
 
 
 
