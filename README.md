@@ -193,7 +193,7 @@ The Shapiro-Wilkinson test for normality shall be used here as sample size << 20
 other data seems to behave like  Brownian motion and other does not. It should be noticed that some care is needed when considering
 normality tests, for example it might be a good idea to use the QQ-plot. Let us now take a look at bitcoin data of last  five years
 and try to find a three month timeframe when the bitcoin behave mostly like a Brownian motion and least like a Brownian motion. 
-We are lead to
+We are lead to (${\color{green}ADD}$)
 
 
 
@@ -217,7 +217,7 @@ $$ \phi(u) = \exp\{it\left(i \alpha u - \frac{1}{2} \sigma^2 u^2 + \int_{-\infty
 
 and the integral can be calculated using fast fourier transform.
 
-One of these models is CGMY process (ADD)
+One of these models is CGMY process (${\color{green}ADD}$)
 
 
 $\color{red} Example ~ 4$ At certain poker site one can play a tournament format which consists of 30 players where the buy-in is 10$. Furthermore top five placements has a prize. 
@@ -268,7 +268,6 @@ which indeed was the actual result.
 TODO:  
 
 1) Add SL/XL -insurance analyses example
-2) Try to simulate data in Example 1 using Panjer algorithm
 
 
 
