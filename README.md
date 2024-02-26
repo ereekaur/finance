@@ -1,5 +1,6 @@
 
-Here I have studied different cases which I have encountered and which are related to optimization or financial world.
+Here I have studied different cases which I have encountered and which are related to optimization or financial world
+(+ some other examples).
 
  
 $\color{red} Example ~ 1$ In this example I have insurance data from three years, namely dates and claims costs from 68
