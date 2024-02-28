@@ -24,7 +24,7 @@ This in turn yields the distribution on the right-hand side above and  gives the
 be interested in what premium we could offer, say, with 99% confidence. In this case it would be 469k without profit marginal. If we want to put
 more weight on tails we could use Cauchy distribution with the expected value of 36 which gives 600k with 99% confidence which is a very extreme estimate. 
 One could go further in analysis by replacing the discrete distribution of claim costs by a negative exponential function. It is notable that the linear 
-regression in this case does not give any meaningful results; first of all, at year level there are too few data-points (though p-value is very small) to draw 
+regression in this case does not give any meaningful results; first of all, at annual level there are too few data-points (though p-value is very small) to draw 
 any conclusions and on the other hand if one wants to use all data points then the model is not useful since the time is not explanatory factor for one claim cost itself.
 
 Yet another ubiquitous distribution, Weibull distribution, could be fitted to data for analysis. If we want to approach as in Bayes i.e. using the Weibull distribution as the prior
@@ -38,14 +38,14 @@ and thus calculations will become simpler. Using Gamma(20,300) as a prior gives 
 
 From here we can say with the confidence level of 99% that the total costs are less than 459332.7
 
-Finally, let us take a look at Panjer recursion which considers a compound random variables. Its efficiency lies in omitting convolution calculations.
+Finally, let us take a look at the Panjer recursion which considers a compound random variables. Its efficiency lies behind omitting convolution calculations.
 Here, the claim costs are a compound of Poisson distribution and for example, Weibull distribution. It is notable that the Poisson assumption can be replaced here exactly
-by two different discrete distributions (to ensure numerical stability) which are Bin and Negbin. There are also considerations in pushing this further but the Panjer
+by two different discrete distributions (to ensure numerical stability) which are Bin and Negbin. There are also considerations in pushing this further but then the Panjer
 recursion has to be modified.
 
 
-So far I did not manage to find Panjer algorithm from the latest actuar package in R, but using aggregateDist one can approximate the PCF. However, it is not too hard to implement
-Panjer recursion in order to get PDF of the compound distribution:
+So far I did not manage to find the Panjer algorithm from the latest actuar package in R, but using aggregateDist one can approximate the PCF. However, it is not too hard to implement
+the Panjer recursion in order to get PDF of the compound distribution:
 
 ```R
 
@@ -89,7 +89,7 @@ $$
 \end{align*}
 $$ 
 
-but we can extend this into MOP problem via
+but we can extend this into MOP problem by setting
 
 $$
 \begin{align*}
@@ -100,7 +100,7 @@ $$
 $$ 
 
 where $\mu$ is a predetermined average of the claim costs, c=(2, 1.5, 1, 0.9, 0.8, 0.6) and sixth class is the best bonus class, $a_i$ is the probability of being in class i. 
-It is convenient to assume that claims occurence admits Poisson distribution; then we could have, for example the following transition matrix:
+It is convenient to assume that the occurence of claims admits Poisson distribution; then we could have, for example the following transition matrix:
 
 $$
 \begin{bmatrix}
@@ -172,8 +172,8 @@ which gives
 ```python
 Optimal values of c_i: [ 8.95208668 15.0555552  25.32032479  6.60474165 11.10780715  8.95208668]
 ```
-However finding a Pareto optimal solution for MOLP problem seems to be trivial, thus something in our model has to be adjusted
-namely the way we try to measure revenue.
+However finding the Pareto optimal solution for MOLP problem seems to be trivial, thus something in our model has to be adjusted
+namely the way we try to measure the revenue.
 
 
 
