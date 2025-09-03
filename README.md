@@ -178,7 +178,7 @@ namely the way we try to measure the revenue.
 
 
 
-${\color{green} (to~ be ~continued)}$
+
 
 $\color{red} Example  ~ 3$ This example considers how much certain crypto currency data deviates from Brownian motion. It is 
 convenient to use logarithmic differences. Here we have data of two different hours for ethereum currency, and
@@ -218,7 +218,7 @@ $$ \phi(u) = \exp\{it\left(i \alpha u - \frac{1}{2} \sigma^2 u^2 + \int_{-\infty
 
 and the integral can be calculated using fast fourier transform.
 
-One of these models is CGMY process (${\color{green}ADD}$)
+
 
 
 $\color{red} Example ~ 4$ At certain poker site one can play a tournament format which consists of 30 players where the buy-in is 10$. Furthermore top five placements has a prize. 
